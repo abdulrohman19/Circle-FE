@@ -1,4 +1,4 @@
-import { FormLoginState } from "@/types/jsonplaceholder/form";
+import { FormLoginState } from "@/types/form";
 import { useCallback, useState } from "react";
 
 export function FormLogin() {

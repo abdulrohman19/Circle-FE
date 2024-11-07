@@ -23,7 +23,7 @@ import {
             </Text>
   
             <Box display={"flex"} flexDirection={"column"} gap="20px">
-              {suggestedUsers.slice(0,10).map((user) => (
+              {suggestedUsers.slice(0,4).map((user) => (
                 <Box display={"flex"}>
                   <Avatar src={user.profile.profilePicture} />
                   <Box>

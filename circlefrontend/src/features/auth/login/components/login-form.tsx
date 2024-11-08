@@ -1,11 +1,16 @@
 import { Logo } from "@/assets";
 import { GreenButton } from "@/components/green-button";
-import { Box, Link as ChakraLink, Image, Input, Text } from "@chakra-ui/react";
+import { Box, Link as ChakraLink, Image, Input, InputGroup, InputRightElement, IconButton, Text } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
+import { useState } from "react";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useLoginForm } from "../hooks/useLoginForm";
 
 export function LoginForm() {
   const { register, onSubmit, handleSubmit, errors } = useLoginForm();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -25,24 +30,34 @@ export function LoginForm() {
           color={"white"}
         />
 
-        {errors.emailOrUsername ? (
+        {errors.emailOrUsername && (
           <Text as={"span"} color={"red"}>
             {errors.emailOrUsername.message}
           </Text>
-        ) : null}
+        )}
 
-        <Input
-          type="password"
-          placeholder="Password"
-          {...register("password")}
-          color={"white"}
-        />
+        <InputGroup>
+          <Input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            {...register("password")}
+            color={"white"}
+          />
+          <InputRightElement>
+            <IconButton
+              variant="ghost"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+              icon={showPassword ? <ViewOffIcon /> : <ViewIcon />}
+              onClick={togglePasswordVisibility}
+            />
+          </InputRightElement>
+        </InputGroup>
 
-        {errors.password ? (
+        {errors.password && (
           <Text as={"span"} color={"red"}>
             {errors.password.message}
           </Text>
-        ) : null}
+        )}
 
         <Box display={"flex"} justifyContent={"flex-end"}>
           <ChakraLink

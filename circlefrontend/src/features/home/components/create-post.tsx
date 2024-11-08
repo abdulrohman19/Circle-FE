@@ -27,6 +27,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 
 export function CreatePost() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,16 +52,33 @@ export function CreatePost() {
       formData.append("content", data.content);
       formData.append("file", data.file[0]);
 
-      return await api.post("/threads", formData);
+      try {
+        const response = await api.post("/threads", formData);
+        // Mengembalikan true jika respons sukses (status 200)
+        return response.status === 200;
+      } catch (error) {
+        // Jika terjadi error, lempar error agar bisa ditangani di onError
+        throw new Error("Post Thread Failed!");
+      }
     },
     onError: () => {
-      alert("Post Thread Failed!")
+      Swal.fire({
+        icon: 'error',
+        title: 'oopss...',
+        text: 'Post Thread Failed!',
+        confirmButtonColor: '#d33',
+      });
     },
     onSuccess: () => {
-      alert("Post Thread Success!")
+      Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: 'Post Thread Success!',
+        confirmButtonColor: '#3085d6',
+      });
       queryClient.invalidateQueries({
         queryKey: ["threads"]
-      })
+      });
     }
   });
 

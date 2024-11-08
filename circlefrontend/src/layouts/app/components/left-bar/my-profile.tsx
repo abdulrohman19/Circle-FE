@@ -25,7 +25,7 @@ export function MyProfile() {
                 bottom={"-10"}
                 left={"3"}
                 position={"absolute"}
-                src={user.profile.profilePicture}
+                src={user?.profile?.profilePicture}
                 border={"1px solid black"}
               />
             </Box>

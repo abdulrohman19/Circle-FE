@@ -1,0 +1,142 @@
+[
+  {
+    "email": "lina@gmail.com",
+    "username": "lina",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Lina Marlina",
+      "address": "Makassar",
+      "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LF_UPJFsoKT7IugaIEWP7uaNYuTGu7PFmuL-dI4LeM855SWNu98newqt1T_6KkJ-uMA&usqp=CAU",
+      "bio": "Android developer"
+    },
+    "followers": 740,
+    "following": 600,
+    "isFollowed": false
+  },
+  {
+    "email": "rani@gmail.com",
+    "username": "rani",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Rani Septiana",
+      "address": "Jakarta",
+      "profilePicture": "https://habadaily.com/content/media/article/2023-08-29/ini-rekomendasi-model-baju-gamis-buat-ukhti-habadaily-QT7yLnhuhF.jpeg",
+      "bio": "Saya adalah seorang Front-end developer"
+    },
+    "followers": 450,
+    "following": 300,
+    "isFollowed": true
+  },
+  {
+    "email": "sinta@gmail.com",
+    "username": "sinta",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Sinta Dewi",
+      "address": "Yogyakarta",
+      "profilePicture": "https://storage.ws.pho.to/s2/df46b6d944381e63436d91a8b318d73e80d3c4b3_m.jpeg",
+      "bio": "Data Scientist"
+    },
+    "followers": 780,
+    "following": 120,
+    "isFollowed": true
+  },
+  {
+    "email": "dina@gmail.com",
+    "username": "dina",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Dina Kusuma",
+      "address": "Bali",
+      "profilePicture": "https://media.suara.com/pictures/653x366/2020/12/31/20290-pesona-ukhti-thailand-ini-bikin-netizen-kesemsem-tiktok-atidayarinda.jpg",
+      "bio": "UI/UX designer"
+    },
+    "followers": 880,
+    "following": 400,
+    "isFollowed": false
+  },
+  {
+    "email": "yusuf@gmail.com",
+    "username": "yusuf",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Yusuf Alamsyah",
+      "address": "Surabaya",
+      "profilePicture": "",
+      "bio": "Mobile developer"
+    },
+    "followers": 520,
+    "following": 450,
+    "isFollowed": false
+  },
+  {
+    "email": "budi@gmail.com",
+    "username": "budi",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Budi Santoso",
+      "address": "Medan",
+      "profilePicture": "",
+      "bio": "Java enthusiast"
+    },
+    "followers": 300,
+    "following": 150,
+    "isFollowed": false
+  },
+  {
+    "email": "andri@gmail.com",
+    "username": "andri",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Andri Wijaya",
+      "address": "Semarang",
+      "profilePicture": "https://example.com/andri-profile.jpg",
+      "bio": "Python developer"
+    },
+    "followers": 610,
+    "following": 340,
+    "isFollowed": true
+  },
+  {
+    "email": "tomi@gmail.com",
+    "username": "tomi",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Tomi Prasetyo",
+      "address": "Bogor",
+      "profilePicture": "https://example.com/tomi-profile.jpg",
+      "bio": "DevOps engineer"
+    },
+    "followers": 320,
+    "following": 220,
+    "isFollowed": true
+  },
+  {
+    "email": "asep@gmail.com",
+    "username": "asep",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Mang Asep",
+      "address": "Bandung",
+      "profilePicture": "https://img.freepik.com/premium-photo/male-model-wearing-ss24-collection-inspired-by-styler_943281-26227.jpg",
+      "bio": "Saya adalah seorang Back-end developer"
+    },
+    "followers": 200,
+    "following": 100,
+    "isFollowed": true
+  },
+  {
+    "email": "rohman@gmail.com",
+    "username": "rohman",
+    "password": "12345678",
+    "profile": {
+      "fullName": "Abdul Rohman",
+      "address": "New York",
+      "profilePicture": "https://cdn.ishencai.com/gallery/publish/2023/12/13/0bd214cbad864f1daf82eff40e360b9e.png?x-oss-process=image/resize,w_500,h_500",
+      "bio": "Saya adalah seorang Fullstack developer"
+    },
+    "followers": 980,
+    "following": 100,
+    "isFollowed": true
+  }
+]

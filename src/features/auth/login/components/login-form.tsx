@@ -4,7 +4,7 @@ import { Box, Link as ChakraLink, Image, Input, InputGroup, InputRightElement, I
 import { Link as ReactRouterLink } from "react-router-dom";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import { useLoginForm } from "../hooks/useLoginForm";
+import { useLoginForm } from "../hooks/use-login-form";
 
 export function LoginForm() {
   const { register, onSubmit, handleSubmit, errors } = useLoginForm();
@@ -26,15 +26,15 @@ export function LoginForm() {
         </Text>
         <Input
           placeholder="Email/Username"
-          {...register("emailOrUsername")}
+          {...register("email")}
           color={"white"}
         />
 
-        {errors.emailOrUsername && (
+        {errors.email? (
           <Text as={"span"} color={"red"}>
-            {errors.emailOrUsername.message}
+            {errors.email.message}
           </Text>
-        )}
+        ) : null}
 
         <InputGroup>
           <Input
@@ -53,11 +53,11 @@ export function LoginForm() {
           </InputRightElement>
         </InputGroup>
 
-        {errors.password && (
+        {errors.password ? (
           <Text as={"span"} color={"red"}>
             {errors.password.message}
           </Text>
-        )}
+        ) : null}
 
         <Box display={"flex"} justifyContent={"flex-end"}>
           <ChakraLink

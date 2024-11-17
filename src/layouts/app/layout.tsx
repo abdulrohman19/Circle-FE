@@ -3,13 +3,17 @@ import { Outlet } from "react-router-dom";
 import { LeftBar } from "./components/left-bar";
 import { RightBar } from "./components/right-bar";
 
-export function AppLayout() {
+interface AppLayoutProps {
+  children: React.ReactNode;
+}
+
+export function AppLayout({ children }: AppLayoutProps) {
   return (
     <Box display={"flex"}>
       <LeftBar />
 
       <Box w={"561px"} p={"30px"}>
-        <Outlet />
+        {children}
       </Box>
 
       <RightBar />

@@ -23,7 +23,7 @@ export const useRegisterForm = () => {
     async (data: RegisterForm) => {
       const { address, email, name, password } = data;
 
-      await api.post<unknown, unknown, RegisterForm>("/register", {
+      await api.post<RegisterForm>("/register", {
         name,
         address,
         email,

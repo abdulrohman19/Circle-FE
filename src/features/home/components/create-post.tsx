@@ -95,7 +95,7 @@ export function CreatePost() {
         w={"100%"}
         onClick={onOpen}
       >
-        <Avatar src={user.profile.profilePicture} border={"2px solid white"} />
+        <Avatar src={user?.profile?.profilePicture} border={"2px solid white"} />
         <Text color={"brand.secondary.500"}>What is happening?!</Text>
         <Spacer />
         <Image src={GalleryAdd} w="24px" />
@@ -115,7 +115,7 @@ export function CreatePost() {
                 alignItems={"center"}
               >
                 <Avatar
-                  src={user.profile.profilePicture}
+                  src={user?.profile?.profilePicture}
                   border={"2px solid white"}
                 />
                 <Input

@@ -6,7 +6,9 @@ export function useFindThreads() {
   return useQuery<Thread[]>({
     queryKey: ["threads"],
     queryFn: async () => {
-      return (await api.get("/threads")).data;
+      const response = await api.get("/threads");
+      console.log(response, 'data');
+      return response.data as Thread[];
     },
   });
 }

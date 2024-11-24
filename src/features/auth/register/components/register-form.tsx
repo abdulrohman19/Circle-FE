@@ -20,7 +20,7 @@ export function RegisterForm() {
           Register to Circle
         </Text>
         <Input
-          placeholder="Full Name"
+          placeholder="Name"
           {...register("name")}
           color={"white"}
         />

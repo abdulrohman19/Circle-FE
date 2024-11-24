@@ -12,7 +12,11 @@ export const useAuthStore = create<AuthStore>()(
   persist(
     (set) => ({
       user: {} as User,
-      setUser: (user) => set(() => ({ user: user })),
+      setUser: (user) => {
+        console.log(user, 'user');
+        console.log('User Profile', user.profile);
+        set(() => ({ user: user }))
+      },
       clearUser: () => set(() => ({ user: {} as User })),
     }),
     {

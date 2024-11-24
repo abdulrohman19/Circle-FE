@@ -8,6 +8,9 @@ import Cookies from "js-cookie";
 import { useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { api } from "@/libs/api";
+import { useAuthStore } from "@/store/auth";
+import { User } from "@/types/user";
 
 export const useLoginForm = () => {
   const {
@@ -31,6 +34,10 @@ export const useLoginForm = () => {
         expires: 1,
         secure: true
       });
+
+      // Fetch user data
+      const userData = await api.get("/me");
+      useAuthStore.getState().setUser(userData.data as User);
 
       navigate("/");
     },

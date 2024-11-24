@@ -4,6 +4,7 @@ import { Avatar, Box, Button, Card, CardBody, Text } from "@chakra-ui/react";
 
 export function MyProfile() {
   const { user } = useAuthStore();
+  console.log("ini user",user);
 
   return (
     <Box margin={"30px"}>
@@ -36,13 +37,13 @@ export function MyProfile() {
             </Box>
             <Box>
               <Text as="h1" color={"white"} fontWeight={"bold"} fontSize={"xl"}>
-                {user.profile.fullName}
+                {user?.profile?.fullName}
               </Text>
               <Text as="h1" color={"brand.secondary.500"}>
-                @{user.username}
+                @{user.name}
               </Text>
               <Text as="h1" color={"white"}>
-                {user.profile.bio}
+                {user?.profile?.bio}
               </Text>
               <Box display={"flex"} gap="20px" mt="10px">
                 <Text as="h1" color={"white"}>
